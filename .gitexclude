@@ -14,6 +14,7 @@
 !.vimrc
 !.vim
 !.gitignore
+!.gitexclude
 !.gitk
 !.gtkrc
 !.gtkrc-2.0
