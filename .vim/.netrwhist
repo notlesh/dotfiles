@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/stephen/tc/jni'
+let g:netrw_dirhist_2='/home/stephen/tc/jni/gfx'
+let g:netrw_dirhist_3='/home/stephen/thinktank/docserver/conf'
+let g:netrw_dirhist_4='/share/devel/D3GemCalc/gwt/src/org/brewcraft/d3gc/test'
+let g:netrw_dirhist_5='/share/devel/gravity_well/build'
+let g:netrw_dirhist_6='/share/projects/roller/project_plan'
+let g:netrw_dirhist_7='/share/devel/ueye_watch/tools/ueye_watch/build'
+let g:netrw_dirhist_8='/share/devel/brewdroid/source/persistence'

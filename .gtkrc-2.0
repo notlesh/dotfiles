@@ -1,0 +1,8 @@
+# -- THEME AUTO-WRITTEN DO NOT EDIT
+include "/home/stephen/.themes/Clearlooks-DarkOrange/gtk-2.0/gtkrc"
+
+include "/home/stephen/.gtkrc.mine"
+
+gtk-font-name = "DejaVu Sans 6.5"
+
+# -- THEME AUTO-WRITTEN DO NOT EDIT
