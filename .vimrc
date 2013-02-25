@@ -37,8 +37,9 @@ let java_allow_cpp_keywords=1
 " use doxygen syntax highlighting for cpp
 :autocmd FileType c,cpp,h,hpp set syntax=cpp.doxygen
 
-" auto qml filetype
+" auto qmake/qml filetype
 :autocmd BufRead,BufNewFile *.qml set ft=qml
+:autocmd BufRead,BufNewFile *.pro set ft=make
 
 " tabs
 :set softtabstop=4
