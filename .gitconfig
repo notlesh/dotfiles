@@ -1,0 +1,7 @@
+[user]
+	name = Stephen Shelton
+	email = stephen@stephenashelton.com
+[core]
+	excludesfile = /home/stephen/.gitignore
+[receive]
+	denyCurrentBranch = warn
