@@ -249,7 +249,7 @@ au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl
 :smapclear
 
 " pathogen
-" call pathogen#infect()
+call pathogen#infect()
 
 " fugitive
 :nnoremap <silent> <Leader>gd :Gdiff<cr>
