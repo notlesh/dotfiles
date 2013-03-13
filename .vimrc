@@ -272,3 +272,7 @@ call pathogen#infect()
 " handle the case where you start Vim normally and want to use Vim's "Man" function.
 " http://vim.wikia.com/wiki/Using_vim_as_a_man-page_viewer_under_Unix
 let $PAGER=''
+
+" vim-powerline: https://github.com/Lokaltog/vim-powerline/tree/develop/fontpatcher
+let g:Powerline_symbols='fancy'
+set guifont=progyytiny\ for\ Powerline
