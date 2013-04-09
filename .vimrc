@@ -276,3 +276,7 @@ let $PAGER=''
 " vim-powerline: https://github.com/Lokaltog/vim-powerline/tree/develop/fontpatcher
 let g:Powerline_symbols='fancy'
 set guifont=progyytiny\ for\ Powerline
+
+" get rid of namespace indentation
+filetype plugin indent on
+:set cino+=N-s
