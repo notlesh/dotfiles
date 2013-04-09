@@ -40,6 +40,9 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# omg, stop the corrections
+unsetopt correct_all
+
 # -------- end oh-my-zsh stuff
 
 # Lines configured by zsh-newuser-install
