@@ -39,7 +39,7 @@ let java_allow_cpp_keywords=1
 
 " auto qmake/qml filetype
 :autocmd BufRead,BufNewFile *.qml set ft=qml
-:autocmd BufRead,BufNewFile *.pro set ft=make
+:autocmd BufRead,BufNewFile *.pro,*.pri set ft=qmake
 
 " tabs
 :set softtabstop=4
