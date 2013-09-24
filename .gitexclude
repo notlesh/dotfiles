@@ -19,6 +19,7 @@
 !.gtkrc
 !.gtkrc-2.0
 !.ncmpcpp
+!.colorgccrc
 
 # but still exclude certain files
 .vim/.netrwhist

@@ -1,0 +1,7 @@
+# use g++ 4.6 for now... 4.7 produces some internal compiler errors on ASIVA code
+g++ /usr/bin/g++-4.6
+
+# change notes to not be yellow
+noteFileNameColor: reset
+noteNumberColor: white
+noteMessageColor: green

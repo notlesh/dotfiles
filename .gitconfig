@@ -5,3 +5,5 @@
 	excludesfile = /home/stephen/.gitignore
 [receive]
 	denyCurrentBranch = warn
+[push]
+	default = simple
