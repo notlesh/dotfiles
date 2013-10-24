@@ -16,44 +16,6 @@ let s:added_lines = []
 let s:add_methods = []
 
 exec "rubyf ".g:vjde_install_path."/vjde/vjde_template.rb"
-ruby Vjde::VjdeTemplateManager.load_all(VIM::evaluate('g:vjde_install_path'))
-function! VjdeNewClass(type,...) "{{{2
-    let pkg=''
-    let cn =''
-    let path=g:vjde_src_path
-    if strlen(path)==0
-        let path="."
-    endif
-    if  a:0 < 2
-        let cn=inputdialog("Class Name:","")
-    else
-        let cn=a:2
-    end
-    let cpath = expand("%:h")
-    if  match(cpath,g:vjde_src_path)==0 && strlen(g:vjde_src_path)!=0
-	    let cpath = strpart(cpath,strlen(g:vjde_src_path)+1)
-    endif
-    if a:0 <1
-        let pkg=inputdialog("Package Name:",substitute(cpath,'[/\\]','.','g'))
-    else
-        let pkg=a:1
-    end
-    if (cn !~ '[^ \t@$.;+\-*%&\|\^(){}/]\+') 
-        echo 'Invalide Class Name:'.cn
-        return 
-    end
-    if len(pkg)>0
-        let path=path.'/'.substitute(pkg,'\.','/','g')
-    end
-    if (!isdirectory(path)) && exists("*mkdir")
-	    call mkdir(path,'p')
-    endif
-    exec 'edit '.path.'/'.cn.'.java'
-    let paras = {"classname":cn,"package":pkg}
-    let lines = VjdeTemplateJavaRuby(s:VjdeNewFileTypes[a:type],paras)
-    call append(line('$'),lines)
-    let s:added_lines=[]
-endf
 func! VjdeJUnitCase(...)
     let pkg=''
     let cn =''
@@ -93,6 +55,7 @@ func! VjdeJUnitCase(...)
     exec 'normal '.len(s:added_lines).'=='
     let s:added_lines=[]
 endf
+
 func! VjdeTemplateJavaRuby(tn,paras) "{{{2
     let s:added_lines = []
     let mf = &ft

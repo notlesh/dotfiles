@@ -353,7 +353,22 @@ func! Vjde_import_check(cls) "{{{2
     endif
     return s:Vjde_add_import(a:cls)
 endf
+func! s:Vjde_add_import_jsp(cls) "{{{2
+	let l:line_imp = search('^<%@.*\s*import\s\+','nb')
+        if l:line_imp <= 0 
+                let l:line_imp = search('^<%@\s*page\s\+','nb')
+				if l:line_imp<=0
+					let l:line_imp = 0
+				endif
+        endif
+        call append(l:line_imp,'<%@ page import="'.a:cls.'"%>')
+        return 1
+endf
 func! s:Vjde_add_import(cls) "{{{2
+
+		if &ft == 'jsp'
+			return s:Vjde_add_import_jsp(a:cls)
+		end
         if match(a:cls,'^java\.lang\.[A-Z]')==0
             return 0
         endif
@@ -380,6 +395,9 @@ func! Vjde_remove_imports()
     let cls=''
     let res=[]
     for  item in impts
+		if ( match(item.impt,'static') >=0 )
+			continue
+		endif
         let cls = s:Vjde_get_cls(item.impt)
         call cursor(item.line+1,1)
         let res = VjdeGotoDefPos('\<'.cls.'\>','')
@@ -758,6 +776,55 @@ func! Vjde_override(type) " 0 extends 1 implements {{{2
 
 	return
 endf "}}}2
+func! VjdeImplementInner() "{{{2
+    let rpos=line('.')
+	let str = getline(rpos-1)
+    let str = matchstr(str,"new\\s\\+\\([^(.]\\+\\.\\)*[^(.]\\+\\s*(\\s*)\\s*{\\s*$")
+    if ( strlen(str)==0)
+		let str = getline(rpos)
+		let str = matchstr(str,"new\\s\\+\\([^(.]\\+\\.\\)*[^(.]\\+\\s*(\\s*)\\s*{\\s*$")
+		if ( strlen(str)==0)
+			echo 'not found for implements.'
+		endif
+		let rpos = rpos+1
+    endif
+    let name = substitute(str,"new\\s\\+\\(\\([^.]\\+\\.\\)*[^.]\\+\\)\\s*(\\s*)\\s*{\\s*$","\\1",'')
+    let imps = GetImportsStr()
+	call s:VjdeInitJavaCompletion()
+	call g:vjde_java_cfu.FindClass(name,imps,5)
+    if g:vjde_java_cfu.success
+        let rindex=0
+        let roffset= -1
+        for rcm in g:vjde_java_cfu.class.methods
+            
+            let rstr="\tpublic "
+            let roffset+=Vjde_import_check(rcm.ret_type)
+            let rstr.= s:Vjde_get_cls(rcm.ret_type)
+            let rstr.= " ".rcm.name."("
+            let rindex=0
+            for para in rcm.paras
+                let roffset+= Vjde_import_check(para)
+                let rstr.= ( rindex==0?'':', ' )
+                let rstr.= s:Vjde_get_cls(para).' arg'.rindex
+                let rindex+=1
+            endfor
+            let rstr.=")"
+            let rindex=0
+            for exces in rcm.exces
+                let rstr.= ( rindex==0?"  throws ":",")
+                let rstr.= s:Vjde_get_cls(exces)
+                let roffset += Vjde_import_check(exces)
+                let rindex += 1
+            endfor
+            let rstr.=" {"
+            call append(rpos+roffset,"\t/**")
+            call append(rpos+roffset+1,"\t * @see ".g:vjde_java_cfu.class.name."#".rcm.name.'('.join(rcm.paras,', ').') '.rcm.name)
+            call append(rpos+roffset+2,"\t */")
+            call append(rpos+roffset+3,rstr)
+            call append(rpos+roffset+4,"\t}")
+        endfor
+    endif
+endf
 func! VjdeGenerateConstructor() "{{{2
 		let cname = expand("%:t:r")
 		let pkg=''
@@ -865,6 +932,7 @@ function! s:Vjde_utils_setup() "{{{2
 
     nnoremap <buffer> <silent> <Leader>oe :call Vjde_override(0)<CR>
     nnoremap <buffer> <silent> <Leader>oi :call Vjde_override(1)<CR>
+    nnoremap <buffer> <silent> <Leader>ii :call VjdeImplementInner()<CR>
     nnoremap <buffer> <silent> <Leader>as :call VjdeAppendTemplate("Singleton")<CR>
     "imap <M-g> <ESC> :call <SID> Vjde_get_set()<cr>
     "map <M-g> :call <SID>Vjde_get_set()<cr>
@@ -872,6 +940,8 @@ endf "}}}2
 
 if g:vjde_utils_setup==1
 	au BufNewFile,BufRead *.java silent call s:Vjde_utils_setup()
+	au BufNewFile,BufRead *.jsp nnoremap <buffer> <silent> <Leader>ai :call Vjde_fix_import1()<cr>
+
 endif
 
 " vim:fdm=marker:sts=4:ts=4:ff=unix

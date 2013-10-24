@@ -14,3 +14,5 @@ syn keyword cType			i8 ui8 i16 ui16 i32 ui32 i64 ui64 f32 f64
 " highlight tolua_export
 syn match toluaExport "// tolua_export\|// tolua_begin\|// tolua_end"
 highlight toluaExport ctermfg=13 guifg=13
+
+syn keyword constant nullptr
