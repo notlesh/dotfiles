@@ -104,7 +104,7 @@ export OPENOFFICE_HOME="/usr/lib/libreoffice"
 # roller/tc
 export ROLLER_SRC_DIR="/share/devel/tc/jni/"
 
-export TERM=xterm-color
+export TERM=xterm-256color
 
 alias cpu='cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq'
 alias bat='cat /proc/acpi/battery/BAT0/*'
