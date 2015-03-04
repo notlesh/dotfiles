@@ -1,5 +1,5 @@
 " _memberVariables
-syn match memVars /\<[gs]\{0,1\}_[a-zA-Z0-9]*\>/ "containedin=ALLBUT,javaComment,javaLineComment,javaDocComment,javaCommentTitle,javaString
+syn match memVars /\<[gsm]\{0,1\}_[a-zA-Z0-9]*\>/ "containedin=ALLBUT,javaComment,javaLineComment,javaDocComment,javaCommentTitle,javaString
 hi memVars ctermfg=243
 
 " syn match cppPointer \(->\|[a-zA-Z0-9]\*\)
