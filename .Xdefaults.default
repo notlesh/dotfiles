@@ -1,0 +1,75 @@
+! This is the global resources file that is loaded when
+! all users log in, as well as for the login screen
+
+! Fix the Xft dpi to 96; this prevents tiny fonts
+! or HUGE fonts depending on the screen size.
+Xft.dpi: 122
+
+! hintstyle: medium means that (for Postscript fonts) we
+! position the stems for maximum constrast and consistency
+! but dont force the stems to integral widths. hintnone,
+! hintslight, and hintfull are the other possibilities.
+! Xft.hintstyle: hintslight
+! Xft.hinting: true
+
+! Blink instead of beeping
+*visualBell: False
+
+!-----------------------------------------------------------------------------
+! XTERM
+!-----------------------------------------------------------------------------
+
+xterm*font:             -*-proggytiny-*-*-*-*-*-*-*-*-*-*-*-*
+! xterm*font:             -*-proggyoptis-*-*-*-*-*-*-*-*-*-*-*-*
+! xterm*font:             -*-proggycleansz-*-*-*-*-*-*-*-*-*-*-*-*
+! xterm*font:             -*-pixelcarnage monospace-*-*-*-*-*-*-*-*-*-*-*-*
+! xterm*faceName:             ProggyTinyTT for Powerline
+! xterm*faceName:             ProggyTinyTT
+! xterm*faceSize:				10
+
+! XTerm*faceName: Inconsolata
+! XTerm*faceName: DejaVu
+! XTerm*faceSize: 6.5
+
+xterm*geometry:     132x40
+xterm*boldMode:		false
+XTerm*scrollbar:    off
+
+! Backspace
+xterm*ttyModes: erase ^?
+
+! Login shell to make PATH proper
+xterm*loginShell: true
+
+! Colors
+xterm*background: black
+xterm*foreground: gray80
+xterm*vt100*background: black
+xterm*vt100*foreground: gray80
+
+xterm*boldColors: false
+
+! ANSI Red
+xterm*Color1: Salmon
+! ANSI Green
+xterm*Color2: LightGreen
+! ANSI Yellow
+xterm*Color3: Gold
+! ANSI Blue
+xterm*Color4: CornflowerBlue
+! ANSI Magenta
+xterm*Color5: IndianRed
+! ANSI Light Blue
+xterm*Color6: LightSkyBlue
+
+! Mouse Selection
+xterm*cutToBeginningOfLine: false
+xterm*charClass: 33:48,37:48,45-47:48,38:48,58:48
+
+! Scrolling
+xterm*saveLines: 1000000
+xterm*scrollBar: false
+
+
+! Cusror
+Xcursor.theme: PolarCursorTheme
