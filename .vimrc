@@ -41,15 +41,24 @@ let java_allow_cpp_keywords=1
 :autocmd BufRead,BufNewFile *.qml set ft=qml
 :autocmd BufRead,BufNewFile *.pro,*.pri set ft=qmake
 
-" tabs
-:set softtabstop=4
-:set tabstop=4
-:set shiftwidth=4
-:set noexpandtab
+" tabs -- hard tabs unless NETSCOUT
+function! SetupTabs()
+	let l:path = expand('%:p')
+	if l:path =~ '/home/stephen/snackers'
+		setlocal expandtab
+		setlocal softtabstop=4 tabstop=4 shiftwidth=4
+	else
+		setlocal noexpandtab
+		setlocal softtabstop=4 tabstop=4 shiftwidth=4
+	endif
+endfunction
+autocmd! BufReadPost,BufNewFile * call SetupTabs()
+
 :set textwidth=0
-:autocmd FileType xhtml,htm,html,xml,xml2,ant set softtabstop=1 shiftwidth=1 tabstop=1
-:autocmd FileType java,c,cpp,h,hpp set softtabstop=4 shiftwidth=4 tabstop=4
-:autocmd FileType java set makeprg=ant
+
+" :autocmd FileType xhtml,htm,html,xml,xml2,ant set softtabstop=1 shiftwidth=1 tabstop=1
+" :autocmd FileType java,c,cpp,h,hpp set softtabstop=4 shiftwidth=4 tabstop=4
+" :autocmd FileType java set makeprg=ant
 " :autocmd FileType java set efm=\ %#[javac]\ %#%f:%l:%c:%*\\d:%*\\d:\ %t%[%^:]%#:%m,\%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#
 
 :hi Visual ctermbg=17
