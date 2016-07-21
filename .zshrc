@@ -109,7 +109,6 @@ export TERM=xterm-256color
 alias cpu='cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq'
 alias bat='cat /proc/acpi/battery/BAT0/*'
 alias batwatch='watch cat /proc/acpi/battery/BAT0/*'
-alias ls="ls --color"
 alias lss="ls -l"
 alias openoffice="soffice"
 alias fs="df -h"
@@ -117,8 +116,22 @@ alias dc='cd'
 alias no='ls'
 alias on='ls'
 
+if [[ `uname` == "Linux" ]]; then
+	alias ls="ls --color"
+else # OSX
+	alias ls="ls -G"
+fi
+
 # http://vim.wikia.com/wiki/Using_vim_as_a_man-page_viewer_under_Unix
 export PAGER="/bin/sh -c \"unset PAGER;col -b -x | \
     vim -R -c 'set ft=man nomod nolist' -c 'map q :q<CR>' \
 	-c 'map <SPACE> <C-D>' -c 'map b <C-U>' \
 	-c 'nmap K :Man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\""
+
+
+# function to deal with svn moving after-the-fact
+svn_mv_after()
+{
+	mv $2 $1
+	svn mv $1 $2
+}
