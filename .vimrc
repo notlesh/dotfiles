@@ -1,3 +1,6 @@
+" pathogen
+call pathogen#infect()
+
 :com W write
 :set t_Co=256
 :syntax on
@@ -32,7 +35,9 @@ let java_allow_cpp_keywords=1
 :highlight clear CursorLine
 :highlight CursorLine ctermbg=234
 :highlight CursorColumn ctermbg=234
-:nmap <C-T> :set cursorline<CR>:set cursorcolumn<CR>:sleep 250m<CR>:set nocursorline<CR>:set nocursorcolumn<CR>
+
+" conflicts with tab commands below
+" :nmap <C-T> :set cursorline<CR>:set cursorcolumn<CR>:sleep 250m<CR>:set nocursorline<CR>:set nocursorcolumn<CR>
 
 " use doxygen syntax highlighting for cpp
 :autocmd FileType c,cpp,h,hpp set syntax=cpp.doxygen
@@ -152,7 +157,7 @@ function SetTabWidth(w)
 endfunction
 
 " NERDTree
-:map <C-k> :NERDTreeToggle<CR>
+:map <C-k> :NERDTreeMirrorToggle<CR>
 
 " window related
 :hi StatusLineNC ctermfg=234 ctermbg=246
@@ -257,9 +262,6 @@ au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl
 " undo any mappings for select mode
 :smapclear
 
-" pathogen
-" call pathogen#infect()
-
 " fugitive
 :nnoremap <silent> <Leader>gd :Gdiff<cr>
 :nnoremap <silent> <Leader>gl :Glog<cr>
@@ -289,3 +291,12 @@ set guifont=progyytiny\ for\ Powerline
 " get rid of namespace indentation
 filetype plugin indent on
 :set cino+=N-s
+
+" tabs
+set showtabline=1
+hi TabLine      ctermfg=Black  ctermbg=Gray     cterm=NONE
+hi TabLineFill  ctermfg=Black  ctermbg=Gray     cterm=NONE
+hi TabLineSel   ctermfg=White  ctermbg=DarkBlue  cterm=NONE
+:nnoremap d :tabp<cr>
+:nnoremap n :tabn<cr>
+:nnoremap w :tabc<cr>

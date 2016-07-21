@@ -7,3 +7,6 @@
 	denyCurrentBranch = warn
 [push]
 	default = simple
+[pager]
+	diff = "vim -c '%sm/\\e.\\{-}m//ge' -c 'set ft=diff' -c 'normal gg' -c 'setlocal buftype=nofile' -"
+
