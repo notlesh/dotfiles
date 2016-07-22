@@ -159,6 +159,9 @@ endfunction
 " NERDTree
 :map <C-k> :NERDTreeMirrorToggle<CR>
 
+" prevent NERDTree from clobbering t (navigate up in dvorak)
+let NERDTreeMapOpenInTab='\t'
+
 " window related
 :hi StatusLineNC ctermfg=234 ctermbg=246
 :hi StatusLine ctermfg=236 ctermbg=226
