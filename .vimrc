@@ -1,5 +1,5 @@
 " pathogen
-call pathogen#infect()
+execute pathogen#infect()
 
 :com W write
 :set t_Co=256
