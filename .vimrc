@@ -303,3 +303,6 @@ hi TabLineSel   ctermfg=White  ctermbg=DarkBlue  cterm=NONE
 :nnoremap d :tabp<cr>
 :nnoremap n :tabn<cr>
 :nnoremap w :tabc<cr>
+
+" UltiSnips
+let g:UltiSnipsJumpForwardTrigger="<tab>"
