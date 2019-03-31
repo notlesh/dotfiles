@@ -8,8 +8,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-# ZSH_THEME="robbyrussell"
-ZSH_THEME="gallois"
+ZSH_THEME="gnzh"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -77,40 +76,14 @@ compinit
 # prompt adam2
 
 export PATH=$PATH:/home/stephen/.bin/:/sbin/:/usr/sbin/
-export PATH=$PATH:/home/stephen/thinktank/bin/
-export PATH=$PATH:/opt/android-sdk/tools/
-export PATH=$PATH:/opt/android-sdk/platform-tools/
-export PATH=$PATH:/opt/android-ndk/
-export PATH=$PATH:/opt/nuvos/bin/
-export PATH=$PATH:/opt/cxxtest/bin/
-
-export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
-export PRINTER="Canon_MX860_series_USB_1"
-export MPD_HOST="127.0.0.1"
-export MPD_PORT="6600"
-
-export XDG_CONFIG_HOME="/home/stephen/.config"
 
 # i love vim
 export EDITOR="/usr/bin/vim"
 # export PAGER="/usr/bin/vim -u /usr/share/vim/vim73/macros/less.vim"
 # export MANPAGER="/usr/bin/vimmanpager"
 
-# export ANT_ARGS="-logger nuvos.system.NuvosAntLogger"
-
-export GWT_HOME="/opt/gwt"
-export OPENOFFICE_HOME="/usr/lib/libreoffice"
-
-# roller/tc
-export ROLLER_SRC_DIR="/share/devel/tc/jni/"
-
 export TERM=xterm-256color
 
-alias cpu='cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq'
-alias bat='cat /proc/acpi/battery/BAT0/*'
-alias batwatch='watch cat /proc/acpi/battery/BAT0/*'
-alias lss="ls -l"
-alias openoffice="soffice"
 alias fs="df -h"
 alias dc='cd'
 alias no='ls'
@@ -129,9 +102,8 @@ export PAGER="/bin/sh -c \"unset PAGER;col -b -x | \
 	-c 'nmap K :Man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\""
 
 
-# function to deal with svn moving after-the-fact
-svn_mv_after()
+# function to add local npm binaries to $PATH
+npm_add_local_bin_to_path()
 {
-	mv $2 $1
-	svn mv $1 $2
+	export PATH=$PATH:./node_modules/.bin
 }
