@@ -1,9 +1,3 @@
-[submodule ".vim/bundle/vim-nerdtree-tabs"]
-	path = .old_vim/.vim/bundle/vim-nerdtree-tabs
-	url = https://github.com/jistr/vim-nerdtree-tabs.git
-[submodule ".vim/bundle/nerdtree"]
-	path = .old_vim/.vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule ".vim/pack/plugins/start/vim-airline"]
 	path = .vim/pack/plugins/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
