@@ -1,6 +1,36 @@
 [submodule ".vim/bundle/vim-nerdtree-tabs"]
-	path = .vim/bundle/vim-nerdtree-tabs
+	path = .old_vim/.vim/bundle/vim-nerdtree-tabs
 	url = https://github.com/jistr/vim-nerdtree-tabs.git
 [submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
+	path = .old_vim/.vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule ".vim/pack/plugins/start/vim-airline"]
+	path = .vim/pack/plugins/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule ".vim/pack/plugins/start/nerdtree"]
+	path = .vim/pack/plugins/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule ".vim/pack/plugins/start/vim-colors-solarized"]
+	path = .vim/pack/plugins/start/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "pack/plugins/start/vim-fugitive"]
+	path = pack/plugins/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule ".vim/pack/plugins/start/vim-fugitive"]
+	path = .vim/pack/plugins/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule ".vim/pack/plugins/start/vim-gitgutter"]
+	path = .vim/pack/plugins/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule ".vim/pack/plugins/start/syntastic"]
+	path = .vim/pack/plugins/start/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
+[submodule ".vim/pack/plugins/start/detectindent"]
+	path = .vim/pack/plugins/start/detectindent
+	url = https://github.com/roryokane/detectindent.git
+[submodule ".vim/pack/plugins/start/ctrlp.vim"]
+	path = .vim/pack/plugins/start/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule ".vim/pack/plugins/start/vim-gutentags"]
+	path = .vim/pack/plugins/start/vim-gutentags
+	url = https://github.com/ludovicchabant/vim-gutentags.git

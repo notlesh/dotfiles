@@ -3,7 +3,7 @@ preexec () {
     [ -f .keychain/`hostname`-sh ] && . ~/.keychain/`hostname`-sh 
 }  
 
-alias agent="keychain -q ~/.ssh/id_dsa" 
+alias agent="keychain"
 alias kagent="keychain -k"  
 
 agent 

@@ -1,0 +1,56 @@
+"""
+"  settings for stock-vim
+""" 
+
+" search settings
+set hlsearch " highlight search results
+set incsearch " highlight search results as it's being typed
+set ignorecase " ignore case while typing
+set smartcase " ...except when a capital letter appears in search string
+
+" auto-indent settings
+filetype plugin indent on " autoindent strategy based on filetype
+" NOTE: also see DetectIndent settings below
+
+" preferred tab settings: use hard tabs, a hard tab represents 4 spaces
+" https://www.youtube.com/watch?v=SsoOG6ZeyUI
+set tabstop=4 " how vim interprets a tab character (\t)
+set softtabstop=0 noexpandtab " settings for converting tabs to spaces -- don't ever confuse the two
+set shiftwidth=4 " how many spaces an indention level will have -- set equal to tabstop
+
+" solarized-dark theme
+let g:solarized_termtrans = 1
+syntax enable
+set background=dark
+colorscheme solarized
+
+
+"""
+"  plugin related settings
+"""
+
+" increase vimupdate time (default is 4000)
+" useful for vim-gitgutter
+set updatetime=100
+
+" recommended syntastic settings
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+
+" NERDTreeToggle() by pressing <C-k>
+map <C-k> :NERDTreeToggle<CR>
+
+" our tab preferences having been expressed above, we actually try to match the current file's
+" tab strategy using DetectIndent: https://github.com/roryokane/detectindent
+" The following will cause the plugin to do its magic automatically
+augroup DetectIndent
+	autocmd!
+	autocmd BufReadPost *  DetectIndent
+augroup END
+
+" CtrlP settings
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
