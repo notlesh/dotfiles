@@ -28,3 +28,9 @@
 [submodule ".vim/pack/plugins/start/detectindent"]
 	path = .vim/pack/plugins/start/detectindent
 	url = https://github.com/roryokane/detectindent.git
+[submodule ".vim/pack/plugins/start/ctrlp.vim"]
+	path = .vim/pack/plugins/start/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule ".vim/pack/plugins/start/vim-gutentags"]
+	path = .vim/pack/plugins/start/vim-gutentags
+	url = https://github.com/ludovicchabant/vim-gutentags.git
