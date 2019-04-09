@@ -75,6 +75,8 @@ compinit
 # promptinit
 # prompt adam2
 
+source /etc/environment
+
 export PATH=$PATH:/home/stephen/.bin/:/sbin/:/usr/sbin/
 
 # i love vim
