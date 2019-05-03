@@ -1,0 +1,38 @@
+# An MPD conf file meant to run on stock[-ish] Ubuntu with pulseaudio.
+# music files go in ~/music and playlists in ~/music/playlists.
+#
+# A small modification to pulseaudio configuration is needed to allow
+# MPD's TCP connections from localhost, see:
+#
+# https://bugs.launchpad.net/ubuntu/+source/mpd/+bug/1354052
+#
+# Specifically, add the following line to /etc/pulse/default.pa:
+# load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1
+#
+# Additionally, Ubuntu wants to run MPD as a service under the "mpd" user, so
+# symlink this file (or copy) to /etc/mpd.conf
+#
+
+music_directory		"/home/stephen/music"
+playlist_directory	"/home/stephen/music/playlists"
+
+db_file			"/var/lib/mpd/tag_cache"
+log_file		"/var/log/mpd/mpd.log"
+pid_file		"/run/mpd/pid"
+state_file		"/var/lib/mpd/state"
+sticker_file		"/var/lib/mpd/sticker.sql"
+
+user			"mpd"
+bind_to_address		"localhost"
+
+input {
+        plugin "curl"
+}
+
+audio_output {
+	type		"pulse"
+	name		"pulse audio"
+	server		"127.0.0.1"
+}
+
+filesystem_charset		"UTF-8"
