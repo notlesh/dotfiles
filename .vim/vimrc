@@ -15,7 +15,7 @@ filetype plugin indent on " autoindent strategy based on filetype
 " preferred tab settings: use hard tabs, a hard tab represents 4 spaces
 " https://www.youtube.com/watch?v=SsoOG6ZeyUI
 set tabstop=4 " how vim interprets a tab character (\t)
-set softtabstop=0 noexpandtab " settings for converting tabs to spaces -- don't ever confuse the two
+
 set shiftwidth=4 " how many spaces an indention level will have -- set equal to tabstop
 
 " solarized-dark theme
@@ -54,3 +54,8 @@ augroup END
 " CtrlP settings
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+" vim-indent-guides settings
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=8
