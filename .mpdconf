@@ -9,6 +9,9 @@
 # Specifically, add the following line to /etc/pulse/default.pa:
 # load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1
 #
+# Then restart pulseaudio by killing it:
+# pulseaudio -k
+#
 # Additionally, Ubuntu wants to run MPD as a service under the "mpd" user, so
 # symlink this file (or copy) to /etc/mpd.conf
 #
