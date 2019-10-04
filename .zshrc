@@ -86,6 +86,7 @@ export EDITOR="/usr/bin/vim"
 
 export TERM=xterm-256color
 
+alias vim="nvim"
 alias fs="df -h"
 alias dc='cd'
 alias no='ls'
