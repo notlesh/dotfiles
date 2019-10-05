@@ -40,3 +40,6 @@
 [submodule ".vim/pack/plugins/start/vim-indent-guides"]
 	path = .vim/pack/plugins/start/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides
+[submodule ".vim/pack/plugins/start/vim-qml"]
+	path = .vim/pack/plugins/start/vim-qml
+	url = https://github.com/peterhoeg/vim-qml
