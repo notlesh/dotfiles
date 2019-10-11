@@ -77,7 +77,15 @@ compinit
 
 source /etc/environment
 
-export PATH=$PATH:/home/stephen/.bin/:/sbin/:/usr/sbin/
+# high precedence PATH elements (element:$PATH)
+PATH=$HOME/.bin:$PATH
+PATH=$HOME/.npm-packages/bin:$PATH
+
+# low precedence PATH elements ($PATH:element)
+PATH=$PATH:/sbin
+PATH=$PATH:/usr/sbin
+
+export PATH
 
 # i love vim
 export EDITOR="/usr/bin/vim"
