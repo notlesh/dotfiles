@@ -82,6 +82,7 @@ PATH=$HOME/.bin:$PATH
 PATH=$HOME/.npm-packages/bin:$PATH
 
 # low precedence PATH elements ($PATH:element)
+PATH=$PATH:/snap/bin
 PATH=$PATH:/sbin
 PATH=$PATH:/usr/sbin
 
