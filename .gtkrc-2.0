@@ -1,6 +1,6 @@
-# -- THEME AUTO-WRITTEN BY gtk-theme-switch2 DO NOT EDIT
-include "/home/stephen/.themes/Xfce-dusk-2/gtk-2.0/gtkrc"
+# -- THEME AUTO-WRITTEN DO NOT EDIT
+include "/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc"
 
-include "/home/stephen/.gtkrc-2.0.mine"
+include "/home/stephen/.gtkrc.mine"
 
-# -- THEME AUTO-WRITTEN BY gtk-theme-switch2 DO NOT EDIT
+# -- THEME AUTO-WRITTEN DO NOT EDIT

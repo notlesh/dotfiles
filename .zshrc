@@ -119,3 +119,6 @@ npm_add_local_bin_to_path()
 {
 	export PATH=$PATH:./node_modules/.bin
 }
+
+# tell QT5 how to find its theme
+export QT_QPA_PLATFORMTHEME="qt5ct"
