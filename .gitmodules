@@ -43,3 +43,6 @@
 [submodule ".vim/pack/plugins/start/vim-qml"]
 	path = .vim/pack/plugins/start/vim-qml
 	url = https://github.com/peterhoeg/vim-qml
+[submodule ".vim/pack/plugins/start/vim-cpp-enhanced-highlight"]
+	path = .vim/pack/plugins/start/vim-cpp-enhanced-highlight
+	url = https://github.com/octol/vim-cpp-enhanced-highlight.git
