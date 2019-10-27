@@ -113,6 +113,10 @@ if hash rg; then
 	alias grep="rg"
 fi
 
+if hash fd; then
+	alias find="fd"
+fi
+
 alias dc='cd'
 alias no='ls'
 alias on='ls'

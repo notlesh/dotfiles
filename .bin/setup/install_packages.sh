@@ -21,6 +21,8 @@ resolvconf
 smartmontools
 irssi
 ripgrep
+jq
+pkg-config
 "
 
 # non-headless packages
@@ -55,6 +57,6 @@ PACKAGES="$HEADLESS_PACKAGES $NON_HEADLESS_PACKAGES $PERSONAL_PACKAGES $HARDWARE
 
 sudo apt install $PACKAGES
 
-CARGO_PACKAGES="du-dust eva chars"
+CARGO_PACKAGES="du-dust eva chars mdcat watchexec fd-find"
 
 cargo install $CARGO_PACKAGES
