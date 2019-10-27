@@ -20,6 +20,7 @@ npm
 resolvconf
 smartmontools
 irssi
+ripgrep
 "
 
 # non-headless packages
