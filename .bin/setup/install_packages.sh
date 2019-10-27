@@ -26,6 +26,7 @@ pkg-config
 gron
 syncthing
 syncthing-gtk
+cargo
 "
 
 # non-headless packages
