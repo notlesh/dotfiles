@@ -23,6 +23,9 @@ irssi
 ripgrep
 jq
 pkg-config
+gron
+syncthing
+syncthing-gtk
 "
 
 # non-headless packages

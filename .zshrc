@@ -12,7 +12,7 @@ ZSH=$HOME/.oh-my-zsh
 
 # instead of using a ZSH theme, use promptline:
 # https://github.com/edkolev/promptline.vim
-source $HOME/promptline.sh
+source $HOME/.promptline.sh
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
