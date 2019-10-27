@@ -46,3 +46,6 @@
 [submodule ".vim/pack/plugins/start/vim-cpp-enhanced-highlight"]
 	path = .vim/pack/plugins/start/vim-cpp-enhanced-highlight
 	url = https://github.com/octol/vim-cpp-enhanced-highlight.git
+[submodule ".vim/pack/plugins/start/promptline"]
+	path = .vim/pack/plugins/start/promptline
+	url = https://github.com/edkolev/promptline.vim
