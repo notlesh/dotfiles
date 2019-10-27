@@ -90,30 +90,28 @@ PATH=$PATH:/usr/sbin
 export PATH
 
 # i love vim
+# vimpager can be found at: https://github.com/rkitover/vimpager
 export EDITOR="/usr/bin/vim"
-# export PAGER="/usr/bin/vim -u /usr/share/vim/vim73/macros/less.vim"
-# export MANPAGER="/usr/bin/vimmanpager"
+export PAGER="/usr/local/bin/vimpager"
+export MANPAGER="/usr/local/bin/vimpager"
 
 export TERM=xterm-256color
 
-alias vim="nvim"
-alias fs="df -h"
+if hash nvim; then
+	alias vim="nvim"
+fi
+
+if hash exa; then
+	alias ls="exa"
+fi
+
+if hash bat; then
+	alias cat="bat"
+fi
+
 alias dc='cd'
 alias no='ls'
 alias on='ls'
-
-if [[ `uname` == "Linux" ]]; then
-	alias ls="ls --color"
-else # OSX
-	alias ls="ls -G"
-fi
-
-# http://vim.wikia.com/wiki/Using_vim_as_a_man-page_viewer_under_Unix
-export PAGER="/bin/sh -c \"unset PAGER;col -b -x | \
-    vim -R -c 'set ft=man nomod nolist' -c 'map q :q<CR>' \
-	-c 'map <SPACE> <C-D>' -c 'map b <C-U>' \
-	-c 'nmap K :Man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\""
-
 
 # function to add local npm binaries to $PATH
 npm_add_local_bin_to_path()
