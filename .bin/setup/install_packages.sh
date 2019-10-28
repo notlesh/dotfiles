@@ -64,3 +64,7 @@ sudo apt install $PACKAGES
 CARGO_PACKAGES="du-dust eva chars mdcat watchexec fd-find"
 
 cargo install $CARGO_PACKAGES
+
+PIP_PACKAGES="http-prompt"
+
+pip install $PIP_PACKAGES

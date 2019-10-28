@@ -84,6 +84,7 @@ source /etc/environment
 
 # high precedence PATH elements (element:$PATH)
 PATH=$HOME/.bin:$PATH
+PATH=$HOME/.local/bin:$PATH
 PATH=$HOME/.npm-packages/bin:$PATH
 PATH=$HOME/.cargo/bin:$PATH
 
