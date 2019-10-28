@@ -8,7 +8,8 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="gnzh"
+#ZSH_THEME="gnzh" # use promptline instead (see below)
+
 
 # instead of using a ZSH theme, use promptline:
 # https://github.com/edkolev/promptline.vim
@@ -133,3 +134,8 @@ npm_add_local_bin_to_path()
 
 # tell QT5 how to find its theme
 export QT_QPA_PLATFORMTHEME="qt5ct"
+
+# prevent extra whitespace on right side of prompt injected by zsh
+# TODO: something is resetting this between sourc'ing .promptline.sh
+#       and this line
+export ZLE_RPROMPT_INDENT=0
