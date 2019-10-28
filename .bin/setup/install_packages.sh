@@ -61,6 +61,10 @@ PACKAGES="$HEADLESS_PACKAGES $NON_HEADLESS_PACKAGES $PERSONAL_PACKAGES $HARDWARE
 
 sudo apt install $PACKAGES
 
+# packages from specific PPAs
+sudo add-apt-repository ppa:mmstick76/alacritty
+sudo apt install alacritty
+
 CARGO_PACKAGES="du-dust eva chars mdcat watchexec fd-find"
 
 cargo install $CARGO_PACKAGES
