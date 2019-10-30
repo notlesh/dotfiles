@@ -27,6 +27,7 @@ gron
 syncthing
 syncthing-gtk
 cargo
+pwgen
 "
 
 # non-headless packages
