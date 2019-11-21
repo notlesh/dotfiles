@@ -28,6 +28,8 @@ syncthing
 syncthing-gtk
 cargo
 pwgen
+clangd
+golang
 "
 
 # non-headless packages
