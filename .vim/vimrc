@@ -67,6 +67,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=8
 noremap <Leader>' :YcmForceCompileAndDiagnostics<CR><CR>:GitGutter<CR>
 noremap <Leader>f :YcmCompleter FixIt<CR>
 noremap <Leader>g :YcmCompleter GoTo<CR>
+noremap <leader>r :YcmCompleter GoToReferences<CR>
 noremap <leader>t :YcmCompleter GetType<CR>
 noremap <leader>p :YcmCompleter GetParent<CR>
 noremap <leader>d :YcmCompleter GetDoc<CR>
