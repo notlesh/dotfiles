@@ -2,6 +2,9 @@
 "  settings for stock-vim
 """ 
 
+" set our leader to "-" (an easy key in dvorak, and unused)
+:let mapleader = "-"
+
 " search settings
 set hlsearch " highlight search results
 set incsearch " highlight search results as it's being typed
@@ -59,3 +62,11 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=8
+
+" YouCompleteMe
+noremap <Leader>' :YcmForceCompileAndDiagnostics<CR><CR>:GitGutter<CR>
+noremap <Leader>f :YcmCompleter FixIt<CR>
+noremap <Leader>g :YcmCompleter GoTo<CR>
+noremap <leader>t :YcmCompleter GetType<CR>
+noremap <leader>p :YcmCompleter GetParent<CR>
+noremap <leader>d :YcmCompleter GetDoc<CR>

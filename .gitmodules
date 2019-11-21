@@ -49,3 +49,6 @@
 [submodule ".vim/pack/plugins/start/promptline"]
 	path = .vim/pack/plugins/start/promptline
 	url = https://github.com/edkolev/promptline.vim
+[submodule ".vim/pack/plugins/start/YouCompleteMe"]
+	path = .vim/pack/plugins/start/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe/
