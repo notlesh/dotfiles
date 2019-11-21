@@ -56,7 +56,7 @@ augroup END
 
 " CtrlP settings
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_cmd = 'CtrlPMRU'
 
 " vim-indent-guides settings
 let g:indent_guides_enable_on_vim_startup = 1
