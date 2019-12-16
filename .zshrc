@@ -98,8 +98,8 @@ export PATH
 # i love vim
 # vimpager can be found at: https://github.com/rkitover/vimpager
 export EDITOR="/usr/bin/vim"
-export PAGER="/usr/local/bin/vimpager"
-export MANPAGER="/usr/local/bin/vimpager"
+export PAGER="vimpager"
+export MANPAGER="vimpager"
 
 export TERM=xterm-256color
 
