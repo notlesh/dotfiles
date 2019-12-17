@@ -136,7 +136,3 @@ npm_add_local_bin_to_path()
 # tell QT5 how to find its theme
 export QT_QPA_PLATFORMTHEME="qt5ct"
 
-# prevent extra whitespace on right side of prompt injected by zsh
-# TODO: something is resetting this between sourc'ing .promptline.sh
-#       and this line
-export ZLE_RPROMPT_INDENT=0
