@@ -1,6 +1,7 @@
 [user]
 	name = Stephen Shelton
-	email = stephen@stephenashelton.com
+	email = steve@brewcraft.org
+	signingkey = EE4BADACCE8B631C
 [core]
 	excludesfile = /home/stephen/.gitignore
 [receive]
@@ -12,3 +13,7 @@
 	color = false
 	show = vim -R -
 
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
