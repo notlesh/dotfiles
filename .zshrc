@@ -87,6 +87,7 @@ PATH=$HOME/.bin:$PATH
 PATH=$HOME/.local/bin:$PATH
 PATH=$HOME/.npm-packages/bin:$PATH
 PATH=$HOME/.cargo/bin:$PATH
+PATH=/usr/lib/ccache:$PATH
 
 # low precedence PATH elements ($PATH:element)
 PATH=$PATH:/snap/bin
