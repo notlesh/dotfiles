@@ -137,3 +137,5 @@ npm_add_local_bin_to_path()
 # tell QT5 how to find its theme
 export QT_QPA_PLATFORMTHEME="qt5ct"
 
+# set GPG_TTY so pinentry-tty will work
+export GPG_TTY=$(tty)
