@@ -139,3 +139,7 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 
 # set GPG_TTY so pinentry-tty will work
 export GPG_TTY=$(tty)
+
+# hack: setting GCC_COLORS fixes ccache issue where colors are stripped
+# https://github.com/ccache/ccache/issues/224
+export GCC_COLORS="error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
