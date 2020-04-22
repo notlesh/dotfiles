@@ -116,10 +116,6 @@ if hash bat; then
 	alias cat="bat"
 fi
 
-if hash rg; then
-	alias grep="rg"
-fi
-
 if hash fd; then
 	alias find="fd"
 fi
