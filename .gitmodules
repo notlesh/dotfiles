@@ -52,3 +52,6 @@
 [submodule ".vim/pack/plugins/start/YouCompleteMe"]
 	path = .vim/pack/plugins/start/YouCompleteMe
 	url = https://github.com/ycm-core/YouCompleteMe/
+[submodule ".vim/pack/plugins/start/editorconfig-vim"]
+	path = .vim/pack/plugins/start/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
