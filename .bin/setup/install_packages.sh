@@ -74,7 +74,7 @@ sudo apt install $PACKAGES
 sudo add-apt-repository ppa:mmstick76/alacritty
 sudo apt install alacritty
 
-CARGO_PACKAGES="du-dust eva chars mdcat watchexec fd-find"
+CARGO_PACKAGES="du-dust eva chars mdcat watchexec fd-find sccache"
 
 cargo install $CARGO_PACKAGES
 

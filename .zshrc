@@ -139,3 +139,8 @@ export GPG_TTY=$(tty)
 # hack: setting GCC_COLORS fixes ccache issue where colors are stripped
 # https://github.com/ccache/ccache/issues/224
 export GCC_COLORS="error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
+
+# sccache config. I mount an old SATA SSD at /mnt/scratch, perfect for this sort of thing.
+export RUSTC_WRAPPER=/home/stephen/.cargo/bin/sccache
+SCCACHE_DIR=/mnt/scratch/cache/sccache
+SCCACHE_CACHE_SIZE="128G"
