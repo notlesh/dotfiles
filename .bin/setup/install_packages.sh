@@ -10,8 +10,6 @@ powertop
 cmake build-essential
 keychain
 virtualbox
-python-pip
-ctags
 autofs
 mutt
 tmux
@@ -25,17 +23,24 @@ jq
 pkg-config
 gron
 syncthing
-syncthing-gtk
 cargo
 pwgen
 clangd
 golang
+apt-transport-https
+curl
+gnupg
+libdbus-1-dev
+libhwloc-dev
+zfsutils-linux
+ncdu
+tig
+python3-dev
 "
 
 # non-headless packages
 NON_HEADLESS_PACKAGES="
 fonts-hack
-discord
 libreoffice
 xserver-xephyr
 gimp
@@ -43,6 +48,7 @@ screenruler
 kmag
 gpick
 scrot
+enlightenment
 "
 
 # personal machines
