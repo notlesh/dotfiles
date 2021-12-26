@@ -1,7 +1,7 @@
 [user]
 	name = Stephen Shelton
 	email = steve@brewcraft.org
-	signingkey = EE4BADACCE8B631C
+	signingkey = D1A3262BE3A9396D
 [core]
 	excludesfile = /home/stephen/.gitignore
 [receive]
