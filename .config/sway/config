@@ -192,27 +192,8 @@ exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CU
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 
 # style
-default_border pixel 3
-gaps inner 5
-
-# use scratchpad for a visor terminal
-bindsym Ctrl+Shift+Return    scratchpad show
-for_window [app_id="^visor$"] {
-    move scratchpad
-    move absolute position 0 25
-    resize set 100 ppt 80 ppt
-}
-
-# TODO:
-# keys:
-#   SpaceFM
-#
-# run-or-raise - or autospawn
-# dev terminal
-# notification dark/light mode
+default_border pixel 2
+gaps inner 4
 
 include *.config
 
-exec --no-startup-id termite --name=dev
-exec --no-startup-id termite --name=visor
-exec firefox
