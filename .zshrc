@@ -8,7 +8,10 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="gnzh"
+ZSH_THEME="agnoster"
+
+# used by "agnoster" theme to hide user@host when logged in to default
+DEFAULT_USER="stephen"
 
 
 # instead of using a ZSH theme, use promptline:
