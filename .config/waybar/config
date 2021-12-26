@@ -41,10 +41,10 @@
         "spacing": 10,
     },
     "clock": {
-        "format": "[{:%a %Y %b %d %R}]"
+        "format": "{:%a %Y %b %d %R}"
     },
     "custom/utc": {
-        "format": "[{}]",
+        "format": "{}",
         "exec": "TZ=UTC date \"+%H:%M %Z\"",
         "interval": 30,
     },
@@ -98,6 +98,7 @@
     "network": {
         "format-ethernet": "ﯱ",
         "format-wifi": " {essid}",
+        "tooltip-format-wifi": " {signaldBm} dBm on {frequency} MHz  {ipaddr}/{cidr}",
         "format-disconnected": ""
     },
     "pulseaudio": {

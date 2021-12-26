@@ -8,7 +8,7 @@
 
 window#waybar {
   background-color: #282c34;
-  opacity: 0.7;
+  opacity: 0.8;
   color: #dcdfe4;
 }
 
@@ -21,7 +21,7 @@ window#waybar {
   padding: 0 5px;
   background: transparent;
   color: #dcdfe4;
-  border-top: 2px solid transparent;
+  border-top: 2px solid;
 }
 
 #workspaces button.focused {
@@ -47,10 +47,12 @@ window#waybar {
 #memory,
 #network,
 #pulseaudio {
-  padding: 0 5px;
+  padding: 1px 5px;
   margin-right: 5px;
   margin-top: 5px;
   color: #dcdfe4;
+  border: 1px solid rgba(220, 223, 228, 0.3);
+  background-color: rgba(0, 43, 54, 0.45);
 }
 
 #temperature.critical {
@@ -82,4 +84,13 @@ window#waybar {
 
 #network.disconnected {
   background: #f53c3c;
+}
+
+.modules-center {
+  padding: 1px 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  color: #e9c46a;
+  border: 1px solid rgba(233, 196, 106, 0.3);
+  background-color: rgba(7, 54, 66, 0.45);
 }
