@@ -34,6 +34,7 @@ window#waybar {
 }
 
 #tray,
+#language,
 #backlight,
 #custom-media,
 #custom-profile,
@@ -53,6 +54,11 @@ window#waybar {
   color: #dcdfe4;
   border: 1px solid rgba(220, 223, 228, 0.3);
   background-color: rgba(0, 43, 54, 0.45);
+}
+
+#language {
+  /* workaround for: https://github.com/Alexays/Waybar/issues/952 */
+  min-width: 70;
 }
 
 #temperature.critical {

@@ -38,7 +38,7 @@ exec swayidle -w \
 input * {
     xkb_layout "us"
     xkb_variant "dvorak"
-    xkb_options "ctrl:nocaps"
+    xkb_options "grp:win_space_toggle,ctrl:nocaps"
 }
 
 input "12951:6505:ZSA_Moonlander_Mark_I" {

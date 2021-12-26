@@ -15,8 +15,8 @@
         "backlight",
         "battery",
         "custom/weather",
+        // "sway/language",
         "custom/utc",
-        "custom/ro",
         "clock",
         "tray"
     ],
@@ -48,6 +48,12 @@
         "exec": "TZ=UTC date \"+%H:%M %Z\"",
         "interval": 30,
     },
+    /* TODO: I can't seem to configure .config/sway/config to allow dvorak and "" layout,
+             so this is worthless...
+    "sway/language": {
+        "format": " {variant}",
+    },
+    */
     "custom/media": {
         "format": "{icon}{}",
         "return-type": "json",
