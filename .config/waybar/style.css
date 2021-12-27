@@ -58,7 +58,7 @@ window#waybar {
 
 #language {
   /* workaround for: https://github.com/Alexays/Waybar/issues/952 */
-  min-width: 70;
+  min-width: 70px;
 }
 
 #temperature.critical {
