@@ -137,6 +137,8 @@ npm_add_local_bin_to_path()
 {
 	export PATH=$PATH:./node_modules/.bin
 }
+# init nvm (based on https://aur.archlinux.org/packages/nvm/)
+source /usr/share/nvm/init-nvm.sh
 
 # tell QT5 how to find its theme
 export QT_QPA_PLATFORMTHEME="qt5ct"
