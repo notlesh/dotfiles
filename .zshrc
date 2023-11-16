@@ -150,7 +150,3 @@ export GPG_TTY=$(tty)
 # https://github.com/ccache/ccache/issues/224
 export GCC_COLORS="error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
 
-# sccache config. I mount an old SATA SSD at /mnt/scratch, perfect for this sort of thing.
-export RUSTC_WRAPPER=/usr/bin/sccache
-export SCCACHE_DIR=/mnt/extra/sccache
-export SCCACHE_CACHE_SIZE="128G"
