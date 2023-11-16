@@ -20,7 +20,7 @@ set $menu 'wofi --show drun,run --gtk-dark'
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/stephen/.config/backgrounds/moonbeam_bg.jpg stretch
+output * bg /home/stephen/.config/backgrounds/arch.jpg stretch
 #
 # Example configuration:
 #
