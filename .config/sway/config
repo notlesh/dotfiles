@@ -83,6 +83,18 @@ input "1133:49291:Logitech_G502_HERO_Gaming_Mouse" {
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
+	# Media keys
+	bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+	bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+	bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+	bindsym XF86MonBrightnessUp exec light -T 1.25
+	bindsym XF86MonBrightnessDown exec light -T 0.85
+
+	bindsym XF86Messenger exec setxkbmap -variant dvorak
+	bindsym Cancel exec setxkbmap us
+
 #
 # Moving around:
 #
