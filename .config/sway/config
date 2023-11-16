@@ -49,15 +49,6 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     xkb_options "grp:win_space_toggle,ctrl:nocaps,grp:rshift_toggle"
 }
 
-input "12951:6505:ZSA_Moonlander_Mark_I" {
-    xkb_layout "us"
-    xkb_variant ""
-}
-
-input "1133:49291:Logitech_G502_HERO_Gaming_Mouse" {
-    pointer_accel -1
-}
-
 ### Key bindings
 #
 # Basics:
