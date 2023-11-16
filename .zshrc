@@ -106,7 +106,7 @@ export PATH
 
 # i love vim
 # vimpager can be found at: https://github.com/rkitover/vimpager
-export EDITOR="/usr/bin/vim"
+export EDITOR="/usr/bin/nvim"
 export PAGER="vimpager"
 export MANPAGER="vimpager"
 
