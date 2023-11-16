@@ -209,6 +209,8 @@ include /etc/sway/config.d/*
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 
+exec lxqt-policykit-agent
+
 # style
 default_border pixel 2
 client.focused #ffffff #ffffff #ffffff
