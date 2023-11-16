@@ -83,6 +83,8 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 	bindsym XF86MonBrightnessUp exec light -T 1.25
 	bindsym XF86MonBrightnessDown exec light -T 0.85
 
+	bindsym Print exec grim -g "$(slurp)" - | wl-copy
+
 	bindsym XF86Messenger exec setxkbmap -variant dvorak
 	bindsym Cancel exec setxkbmap us
 
