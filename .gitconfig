@@ -1,17 +1,18 @@
 [user]
 	name = Stephen Shelton
 	email = steve@brewcraft.org
-	signingkey = D1A3262BE3A9396D
+	signingkey = 31545DC8FDEF4DDD
 [core]
 	excludesfile = /home/stephen/.gitignore
+	pager = nvim -R
 [receive]
 	denyCurrentBranch = warn
 [push]
 	default = simple
 [pager]
-	diff = "vim -c '%sm/\\e.\\{-}m//ge' -c 'set ft=diff' -c 'normal gg' -c 'setlocal buftype=nofile' -"
+	diff = "nvim -c '%sm/\\e.\\{-}m//ge' -c 'set ft=diff' -c 'normal gg' -c 'setlocal buftype=nofile' -"
 	color = false
-	show = vim -R -
+	show = nvim -R -
 
 [commit]
 	gpgsign = true
