@@ -88,6 +88,8 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 	bindsym XF86Messenger exec setxkbmap -variant dvorak
 	bindsym Cancel exec setxkbmap us
 
+	bindsym XF86Favorites exec sudo tlp chargeonce
+
 #
 # Moving around:
 #
