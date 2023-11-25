@@ -11,4 +11,18 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup(plugins, opts)
+-- Make sure to set `mapleader` before lazy so your mappings are correct
+vim.g.mapleader = "'"
+
+require("lazy").setup(
+{
+	"NeogitOrg/neogit",
+	dependencies = {
+		"nvim-lua/plenary.nvim",         -- required
+		"nvim-telescope/telescope.nvim", -- optional
+		"sindrets/diffview.nvim",        -- optional
+		"ibhagwan/fzf-lua",              -- optional
+	},
+	config = true
+}
+);
