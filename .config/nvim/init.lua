@@ -14,15 +14,4 @@ vim.opt.rtp:prepend(lazypath)
 -- Make sure to set `mapleader` before lazy so your mappings are correct
 vim.g.mapleader = "'"
 
-require("lazy").setup(
-{
-	"NeogitOrg/neogit",
-	dependencies = {
-		"nvim-lua/plenary.nvim",         -- required
-		"nvim-telescope/telescope.nvim", -- optional
-		"sindrets/diffview.nvim",        -- optional
-		"ibhagwan/fzf-lua",              -- optional
-	},
-	config = true
-}
-);
+require("lazy").setup("plugins")
