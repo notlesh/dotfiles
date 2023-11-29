@@ -108,7 +108,7 @@ tabspaces: 8
 # Font configuration (changes require restart)
 font:
   normal:
-    family: hack
+    family: HackNerdFontMono
 
   # Normal (roman) font face
   #normal:
