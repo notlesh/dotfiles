@@ -151,3 +151,6 @@ export GCC_COLORS="error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # set DOCKER_HOST to support rootless docker, see:
 # https://wiki.archlinux.org/title/Docker#Rootless_Docker_daemon
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
+
+# zoxide
+eval "$(zoxide init zsh)"
