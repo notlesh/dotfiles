@@ -148,3 +148,6 @@ export GPG_TTY=$(tty)
 # https://github.com/ccache/ccache/issues/224
 export GCC_COLORS="error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
 
+# set DOCKER_HOST to support rootless docker, see:
+# https://wiki.archlinux.org/title/Docker#Rootless_Docker_daemon
+export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
