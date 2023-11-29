@@ -41,14 +41,6 @@ input * {
     xkb_options "grp:win_space_toggle,ctrl:nocaps"
 }
 
-# ThinkPad p14s keyboard
-# uses right-shift to toggle layouts
-input "1:1:AT_Translated_Set_2_keyboard" {
-    xkb_layout "us(dvorak),us"
-    xkb_variant "dvorak"
-    xkb_options "grp:win_space_toggle,ctrl:nocaps,grp:rshift_toggle"
-}
-
 ### Key bindings
 #
 # Basics:
