@@ -17,6 +17,17 @@ rm -r dotfiles
 
 This results in my homedir being the root of this repository.
 
+## Neovim
+
+[Neovim](https://neovim.io) is my editor of choice and is a big part of this repo.
+
+### Initialization
+
+[Lazy](https://github.com/folke/lazy.nvim) is used to manage plugins. It is initialed in `init.vim`
+and should automatically load as needed.
+
+Execute `:Lazy` to bring up a menu showing status about plugins.
+
 ## Theme config
 
 ### GTK
