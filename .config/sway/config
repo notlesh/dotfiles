@@ -39,6 +39,8 @@ input * {
     xkb_layout "us"
     xkb_variant "dvorak"
     xkb_options "grp:win_space_toggle,ctrl:nocaps"
+    repeat_delay 225
+    repeat_rate 100
 }
 
 ### Key bindings
