@@ -104,7 +104,7 @@
     "network": {
         "format-ethernet": "ﯱ",
         "format-wifi": " {essid}",
-        "tooltip-format-wifi": " {signaldBm} dBm on {frequency} MHz  {ipaddr}/{cidr}",
+        "tooltip-format-wifi": " {signaldBm} dBm on {frequency} GHz  {ipaddr}/{cidr}",
         "format-disconnected": ""
     },
     "pulseaudio": {
