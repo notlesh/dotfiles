@@ -104,11 +104,9 @@ PATH=$PATH:/usr/sbin
 
 export PATH
 
-# i love vim
-# vimpager can be found at: https://github.com/rkitover/vimpager
 export EDITOR="/usr/bin/nvim"
-export PAGER="vimpager"
-export MANPAGER="vimpager"
+export PAGER="nvim -R"
+export MANPAGER='nvim +Man!'
 
 export TERM=xterm-256color
 

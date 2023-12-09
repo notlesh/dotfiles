@@ -18,3 +18,5 @@
 	gpgsign = true
 [gpg]
 	program = gpg
+[color]
+	pager = no
