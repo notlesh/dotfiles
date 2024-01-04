@@ -5,6 +5,7 @@
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
     "modules-right": [
+	"mpd",
         "custom/media",
         "network",
         "custom/profile",
@@ -54,17 +55,6 @@
         "format": " {variant}",
     },
     */
-    "custom/media": {
-        "format": "{icon}{}",
-        "return-type": "json",
-        "format-icons": {
-            "Playing": " ",
-            "Paused": " ",
-        },
-        "max-length":70,
-        "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
-        "on-click": "playerctl play-pause",
-    },
     "custom/weather": {
         "exec": "curl 'https://wttr.in?format=1&m'",
         "interval": 1800
@@ -116,6 +106,33 @@
             "headphone": "",
             "default": ["", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol-qt"
+    },
+    "mpd": {
+	    "format": "MPD {stateIcon} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+	    // "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+	    "format-disconnected": "MPD [off]",
+	    "format-stopped": "MPD {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped",
+            "on-click": "ymuse",
+	    "interval": 2,
+	    "consume-icons": {
+		    "on": " " // Icon shows only when "consume" is on
+	    },
+	    "random-icons": {
+		    "on": " "
+	    },
+	    "repeat-icons": {
+		    "on": " "
+	    },
+	    "single-icons": {
+		    "on": "1 "
+	    },
+	    "state-icons": {
+		    "paused": "",
+		    "playing": ""
+	    },
+	    // "tooltip-format": "MPD (connected)",
+	    "tooltip-format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+	    "tooltip-format-disconnected": "MPD (disconnected)"
     },
 }

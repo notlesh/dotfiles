@@ -45,6 +45,7 @@ window#waybar {
 #clock,
 #battery,
 #cpu,
+#mpd,
 #memory,
 #network,
 #pulseaudio {
