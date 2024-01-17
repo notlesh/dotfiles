@@ -17,6 +17,9 @@ set $right l
 set $term wezterm
 set $menu 'wofi --show drun,run --gtk-dark'
 
+for_window [app_id="ymuse"] floating enable
+for_window [app_id="pavucontrol"] floating enable
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
