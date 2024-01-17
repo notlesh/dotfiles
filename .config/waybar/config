@@ -106,7 +106,7 @@
             "headphone": "",
             "default": ["", ""]
         },
-        "on-click": "pavucontrol-qt"
+        "on-click": "pavucontrol"
     },
     "mpd": {
 	    "format": "MPD {stateIcon} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
@@ -114,6 +114,8 @@
 	    "format-disconnected": "MPD [off]",
 	    "format-stopped": "MPD {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped",
             "on-click": "ymuse",
+            "on-click-middle": "mpc toggle",
+            "on-click-right": "mpc next",
 	    "interval": 2,
 	    "consume-icons": {
 		    "on": " " // Icon shows only when "consume" is on
