@@ -93,9 +93,9 @@
     },
     "network": {
         "format-ethernet": "🖧",
-        "format-wifi": " {essid}",
-        "tooltip-format-wifi": " {signaldBm} dBm on {frequency} GHz  {ipaddr}/{cidr}",
-        "format-disconnected": ""
+        "format-wifi": "ᯤ {essid}",
+        "tooltip-format-wifi": "ᯤ {signaldBm} dBm on {frequency} GHz  {ipaddr}/{cidr}",
+        "format-disconnected": "🚫"
     },
     "pulseaudio": {
         "format": "{icon} {volume}%    {format_source}",
