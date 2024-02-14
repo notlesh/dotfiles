@@ -2,8 +2,8 @@
     "layer": "top",
     "position": "top",
     "height": 24,
-    "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
     "modules-right": [
 	"mpd",
         "custom/media",
@@ -16,7 +16,6 @@
         "backlight",
         "battery",
         "custom/weather",
-        // "sway/language",
         "custom/utc",
         "clock",
         "tray"
@@ -26,20 +25,13 @@
         "format": "{icon} {percent}%",
         "format-icons": ["", ""]
     },
-    "sway/workspaces": {
-        "disable-scroll": true,
-        "disable-click": true,
-        "format": "{icon} {name}",
-        "format-icons": {
-            "dev": "",
-            "www": "",
-            "music": "",
-            "comms": "",
-            "urgent": "",
-        }
-    },
     "tray": {
         "spacing": 10,
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "disable-click": true,
+        "format": "{name}",
     },
     "clock": {
         "format": "{:%a %Y %b %d %R}"
@@ -49,12 +41,6 @@
         "exec": "TZ=UTC date \"+%H:%M %Z\"",
         "interval": 30,
     },
-    /* TODO: I can't seem to configure .config/sway/config to allow dvorak and "" layout,
-             so this is worthless...
-    "sway/language": {
-        "format": " {variant}",
-    },
-    */
     "custom/weather": {
         "exec": "curl 'https://wttr.in?format=1&m'",
         "interval": 1800
