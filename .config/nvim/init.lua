@@ -18,3 +18,4 @@ require("lazy").setup("plugins")
 
 -- key mappings
 vim.api.nvim_set_keymap('n', '<C-k>', ':Neotree toggle<cr>', { noremap = true, silent = true })
+
