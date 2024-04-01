@@ -28,6 +28,14 @@ and should automatically load as needed.
 
 Execute `:Lazy` to bring up a menu showing status about plugins.
 
+[Meson](https://github.com/williamboman/mason.nvim) is used for LSPs.
+
+Run `:Meson` for a nice UI.
+
+### Inspiration / Resources
+
+https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/
+
 ## Theme config
 
 ### GTK
