@@ -1,15 +1,14 @@
 * {
   border: none;
-  border-radius: 0;
+  border-radius: 8;
   font-family: "Hack";
-  font-size: 13px;
+  font-size: 14px;
   min-height: 0;
 }
 
 window#waybar {
-  background-color: #282c34;
-  opacity: 0.8;
-  color: #dcdfe4;
+  background: rgba(40, 44, 52, 0.0);
+  opacity: 1;
 }
 
 #window {

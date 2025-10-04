@@ -33,6 +33,9 @@
         "disable-click": true,
         "format": "{name}",
     },
+    "hyprland/window": {
+    	"icon": true,
+    },
     "clock": {
         "format": "{:%a %Y %b %d %R}"
     },
