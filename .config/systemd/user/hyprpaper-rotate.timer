@@ -3,8 +3,8 @@ Description=Run hyprpaper rotate script every hour
 Requires=hyprpaper-rotate.service
 
 [Timer]
-OnBootSec=5min
-OnUnitActiveSec=1min
+OnBootSec=1hour
+OnUnitActiveSec=1hour
 Unit=hyprpaper-rotate.service
 
 [Install]

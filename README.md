@@ -77,6 +77,18 @@ TODO
 
 TODO
 
+### Wallpaper rotating
+
+I have a very crude rotating script at `.bin/hyprland_wallpaper_shuffle.sh` that rotates wallpapers
+randomly from those found in `.config/backgrounds/*`.
+
+This can be automated with `.config/systemd/user/hyprpaper-rotate.timer` by running:
+
+```bash
+systemctl --user daemon-reload
+systemctl --user enable --now hyprpaper_rotate.timer
+```
+
 ### Cursor
 
 I'm currently using Bibata: https://github.com/ful1e5/Bibata_Cursor.
