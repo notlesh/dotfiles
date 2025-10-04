@@ -58,6 +58,14 @@ To set this up:
 ln -s hyprland_machine_a.conf hyprland.conf
 ```
 
+This Hyprland config also needs some dependencies installed and enabled via `systemd`: 
+
+```bash
+sudo pacman -S hypridle hyprlock hyprpaper hyprpolkitagent waybar
+systemctl --user enable --now hyprpaper
+systemctl --user enable --now hryppaper-rotate.timer
+```
+
 ## Shell
 
 I'm using a fairly minimal `zshell` setup with [starship](https://starship.rs/) for prompt theming
