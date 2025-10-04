@@ -1,14 +1,15 @@
 [user]
 	name = Stephen Shelton
 	email = steve@brewcraft.org
-	signingkey = 221C982DFA8D6D27
 [core]
 	excludesfile = /home/stephen/.gitignore
 	pager = nvim -R
+	editor = nvim
 [receive]
 	denyCurrentBranch = warn
 [push]
 	default = simple
+	autoSetupRemote = true
 [pager]
 	diff = "nvim -c '%sm/\\e.\\{-}m//ge' -c 'set ft=diff' -c 'normal gg' -c 'setlocal buftype=nofile' -"
 	color = false
@@ -20,3 +21,7 @@
 	program = gpg
 [color]
 	pager = no
+
+# include .gitconfig.local for e.g. git signing key
+[include]
+	path = ~/.gitconfig.local
