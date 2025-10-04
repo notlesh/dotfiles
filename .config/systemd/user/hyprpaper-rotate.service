@@ -1,0 +1,11 @@
+[Unit]
+Description=Run hyprpaper rotate script
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/stephen/.bin/hyprland_wallpaper_shuffle.sh
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

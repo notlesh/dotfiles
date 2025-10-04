@@ -58,6 +58,14 @@ To set this up:
 ln -s hyprland_machine_a.conf hyprland.conf
 ```
 
+This Hyprland config also needs some dependencies installed and enabled via `systemd`: 
+
+```bash
+sudo pacman -S hypridle hyprlock hyprpaper hyprpolkitagent waybar
+systemctl --user enable --now hyprpaper
+systemctl --user enable --now hryppaper-rotate.timer
+```
+
 ## Shell
 
 I'm using a fairly minimal `zshell` setup with [starship](https://starship.rs/) for prompt theming
@@ -76,6 +84,18 @@ TODO
 ### Qt
 
 TODO
+
+### Wallpaper rotating
+
+I have a very crude rotating script at `.bin/hyprland_wallpaper_shuffle.sh` that rotates wallpapers
+randomly from those found in `.config/backgrounds/*`.
+
+This can be automated with `.config/systemd/user/hyprpaper-rotate.timer` by running:
+
+```bash
+systemctl --user daemon-reload
+systemctl --user enable --now hyprpaper_rotate.timer
+```
 
 ### Cursor
 
