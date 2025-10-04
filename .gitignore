@@ -2,16 +2,19 @@
 *
 
 # Then whitelist
-.bin/
-.config/
-.icons/
-admin/
-.gitconfig
-.gitk
-.gitmodules
-.gtkrc
-.gtkrc-2.0
-.mdpconf
-.zshrc
-README.md
+!.bin/
+!.config/
+!.config/backgrounds/
+!.config/hypr/
+!.config/hypr/
+!.icons/
+!admin/
+!.gitconfig
+!.gitk
+!.gitmodules
+!.gtkrc
+!.gtkrc-2.0
+!.mdpconf
+!.zshrc
+!README.md
 
