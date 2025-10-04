@@ -36,6 +36,28 @@ Run `:Meson` for a nice UI.
 
 https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/
 
+## WM / DE (Hyprland)
+
+I'm using [hyprland](https://hypr.land/) and friends as a Window Manager / Desktop Environment.
+
+The main config for `hyprland` is broken up into a common part and individual files that import the
+common configuration. This is all under `~/.config/hypr`. This repo is missing the standard config
+file (`hyprland.conf`), which is intended to be created as a symlink.
+
+Files:
+
+```bash
+hyprland_common.conf
+hyprland_machine_a.conf # sources hyprland_common.conf
+...
+```
+
+To set this up:
+
+```bash
+ln -s hyprland_machine_a.conf hyprland.conf
+```
+
 ## Theme config
 
 ### GTK

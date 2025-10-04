@@ -1,7 +1,7 @@
 [user]
 	name = Stephen Shelton
 	email = steve@brewcraft.org
-	signingkey = 31545DC8FDEF4DDD
+	signingkey = 221C982DFA8D6D27
 [core]
 	excludesfile = /home/stephen/.gitignore
 	pager = nvim -R
