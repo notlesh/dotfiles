@@ -58,6 +58,15 @@ To set this up:
 ln -s hyprland_machine_a.conf hyprland.conf
 ```
 
+## Shell
+
+I'm using a fairly minimal `zshell` setup with [starship](https://starship.rs/) for prompt theming
+along with system-provided zsh plugins. Arch packages required:
+
+```bash
+sudo pacman -S zsh starship zsh-autosuggestions zsh-syntax-highlighting zsh-completions zsh-history-substring-search
+```
+
 ## Theme config
 
 ### GTK
