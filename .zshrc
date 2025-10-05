@@ -20,3 +20,5 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 eval "$(zoxide init zsh)"
+
+export GPG_TTY=$(tty)
