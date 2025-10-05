@@ -18,3 +18,5 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"  # Colored completions
 # cycle through history using up and down arrows
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+eval "$(zoxide init zsh)"
