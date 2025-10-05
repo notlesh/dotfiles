@@ -5,14 +5,13 @@ return {
 		},
 		lazy = false,
 		config = function()
-			local lspconfig = require('lspconfig')
-			lspconfig.pyright.setup {}
-			lspconfig.rust_analyzer.setup {
+			vim.lsp.config("pyright", {})
+			vim.lsp.config("rust_analyzer", {
 				-- Server-specific settings. See `:help lspconfig-setup`
 				settings = {
 					['rust-analyzer'] = {},
 				},
-			}
+			})
 
 			-- Use LspAttach autocommand to only map the following keys
 			-- after the language server attaches to the current buffer
