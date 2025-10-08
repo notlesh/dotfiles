@@ -21,6 +21,10 @@ This results in my homedir being the root of this repository.
 
 [Neovim](https://neovim.io) is my editor of choice and is a big part of this repo.
 
+> [!NOTE]
+> Ubuntu packages a very old `Neovim`, use
+[this PPA](https://launchpad.net/~neovim-ppa/+archive/ubuntu/unstable) instead: 
+
 ### Initialization
 
 [Lazy](https://github.com/folke/lazy.nvim) is used to manage plugins. It is initialed in `init.vim`
