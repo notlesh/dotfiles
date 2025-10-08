@@ -28,6 +28,15 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"  # Colored completions
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+alias no=ls
+
 eval "$(zoxide init zsh)"
 
 export GPG_TTY=$(tty)
+
+# history settings
+export HISTFILE=$ZDOTDIR/.local/zsh_history
+export HISTSIZE=1000000
+export SAVEHIST=$HISTSIZE
+setopt EXTENDED_HISTORY          # Write the history file in the ':start:elapsed;command' format.
+setopt SHARE_HISTORY             # Share history between all sessions.
