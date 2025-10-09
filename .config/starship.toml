@@ -1,25 +1,25 @@
 format = """
-[░▒▓](#a3aed2)\
-[  ](bg:#a3aed2 fg:#090c0c)\
+[░▒▓](#5eead4)\
+[  ](bg:#5eead4 fg:#090c0c)\
 $username\
 $hostname\
-[](bg:#769ff0 fg:#a3aed2)\
+[](bg:#2dd4bf fg:#5eead4)\
 $directory\
-[](fg:#769ff0 bg:#394260)\
+[](fg:#2dd4bf bg:#14b8a6)\
 $git_branch\
 $git_status\
-[](fg:#394260 bg:#212736)\
+[](fg:#14b8a6 bg:#0d9488)\
 $nodejs\
 $rust\
 $golang\
 $php\
-[](fg:#212736 bg:#1d2230)\
+[](fg:#0d9488 bg:#064e3b)\
 $time\
-[ ](fg:#1d2230)\
+[ ](fg:#064e3b)\
 \n$character"""
 
 [directory]
-style = "fg:#e3e5e5 bg:#769ff0"
+style = "fg:#ffffff bg:#2dd4bf"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -32,49 +32,49 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "bg:#394260"
-format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
+style = "bg:#14b8a6"
+format = '[[ $symbol $branch ](fg:#5eead4 bg:#14b8a6)]($style)'
 
 [git_status]
-style = "bg:#394260"
-format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
+style = "bg:#14b8a6"
+format = '[[($all_status$ahead_behind )](fg:#5eead4 bg:#14b8a6)]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "bg:#0d9488"
+format = '[[ $symbol ($version) ](fg:#2dd4bf bg:#0d9488)]($style)'
 
 [rust]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "bg:#0d9488"
+format = '[[ $symbol ($version) ](fg:#2dd4bf bg:#0d9488)]($style)'
 
 [golang]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "bg:#0d9488"
+format = '[[ $symbol ($version) ](fg:#2dd4bf bg:#0d9488)]($style)'
 
 [php]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "bg:#0d9488"
+format = '[[ $symbol ($version) ](fg:#2dd4bf bg:#0d9488)]($style)'
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:#1d2230"
-format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+style = "bg:#064e3b"
+format = '[[  $time ](fg:#5eead4 bg:#064e3b)]($style)'
 
 [os]
 disabled = true
 
 [username]
 show_always = true
-style_user = "bg:#a3aed2 fg:#090c0c"
-style_root = "bg:#a3aed2 fg:#cc241d"
+style_user = "bg:#5eead4 fg:#090c0c"
+style_root = "bg:#5eead4 fg:#fb7185"
 format = '[$user]($style)'
 
 [hostname]
 ssh_only = true
-style = "bg:#a3aed2 fg:#8a5cf5 bold italic"
+style = "bg:#5eead4 fg:#fb7185 bold italic"
 format = '[@$hostname]($style)'
