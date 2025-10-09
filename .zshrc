@@ -2,7 +2,7 @@
 # load plugins
 
 # Arch contains all of these under /usr/share/zsh
-if [ -f "/usr/share/zsh/" ]; then
+if [ -d "/usr/share/zsh/" ]; then
 	source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 	source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 	source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
