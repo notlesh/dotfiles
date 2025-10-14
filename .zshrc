@@ -36,7 +36,7 @@ eval "$(zoxide init zsh)"
 export GPG_TTY=$(tty)
 
 # history settings
-export HISTFILE=$ZDOTDIR/.local/zsh_history
+export HISTFILE=~/.local/zsh_history
 export HISTSIZE=1000000
 export SAVEHIST=$HISTSIZE
 setopt EXTENDED_HISTORY          # Write the history file in the ':start:elapsed;command' format.
