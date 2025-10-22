@@ -20,6 +20,7 @@
     ~/.Xdefaults.default: Xdefaults.default
     ~/.Xdefaults: Xdefaults.default
     ~/.zshrc: zshrc
+    ~/.zshenv: zshenv
 
     # directories
     ~/.ncmpcpp/:
