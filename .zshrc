@@ -13,6 +13,8 @@ else
 	source /home/stephen/dev/vendor/zsh-history-substring-search/zsh-history-substring-search.zsh
 fi
 
+export COLORTERM=truecolor
+
 # use starship for theming
 eval "$(starship init zsh)"
 
