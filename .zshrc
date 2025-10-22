@@ -53,6 +53,8 @@ zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'r:|[._-]=** 
 zstyle ':completion:*' original false
 zstyle :compinstall filename '/home/stephen/.zshrc'
 
+fastfetch
+
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
