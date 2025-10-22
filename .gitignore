@@ -1,5 +1,6 @@
 # Ignore everything by default
-*
+# TODO: this is a bad idea!!
+# *
 
 # Then whitelist
 !.bin/
