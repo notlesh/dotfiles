@@ -1,0 +1,37 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- create:
+    - ~/.ncmpcpp/
+
+- link:
+    ~/.colorgccrc: colorgccrc
+    ~/.gitconfig: gitconfig
+    ~/.gitk: gitk
+    ~/.gtkrc: gtkrc
+    ~/.gtkrc-2.0: gtkrc-2.0
+    ~/.mpdconf: mpdconf
+    ~/.notags: notags
+    ~/.Xdefaults.default: Xdefaults.default
+    ~/.Xdefaults: Xdefaults.default
+    ~/.zshrc: zshrc
+
+    ~/.ncmpcpp/:
+      glob: true
+      path: ncmpcpp/*
+    ~/.icons/:
+      glob: true
+      path: icons/*
+    ~/.bin/:
+      glob: true
+      path: bin/**
+    ~/.config/:
+      glob: true
+      path: config/**
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+

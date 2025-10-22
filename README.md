@@ -1,21 +1,32 @@
 # Notleshes' Dotfiles
 
 This repo contains all of my non-sensitive config files. It is meant to share
-this config between multiple Arch Linux installations. It generally works for
-other distros as well.
+this config between multiple Arch Linux installations (and support Ubuntu for
+at least a headless VM environment).
+
+The repo is configured to use [dotbot](https://github.com/anishathalye/dotbot)
+, which is done via a git submodule.
 
 ## Using this repo
 
-I usually initialize a new Arch installation with my dotfiles by doing:
+To use this repo, clone it and update submodules, then run the install script:
 
-```sh
-cd $HOME
-git clone git@github.com:notlesh/dotfiles
-mv dotfiles/.* ./
-rm -r dotfiles
+```bash
+git clone --recursive https://github.com/notlesh/dotfiles .dotfiles
+cd .dotfiles
+./install
 ```
 
-This results in my homedir being the root of this repository.
+If it refuses to overwrite files and you're sure it would be OK to do so, force
+it by editing `install.conf.yaml` temporarily:
+
+```yaml
+- defaults:
+    link:
+      ...
+      force: true
+```
+
 
 ## Neovim
 
