@@ -4,7 +4,7 @@ Requires=hyprpaper-rotate.service
 
 [Timer]
 OnBootSec=1hour
-OnUnitActiveSec=1hour
+OnCalendar=Hourly
 Unit=hyprpaper-rotate.service
 
 [Install]
