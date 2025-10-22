@@ -8,6 +8,8 @@
     - ~/.ncmpcpp/
 
 - link:
+
+    # flat files in root dir
     ~/.colorgccrc: colorgccrc
     ~/.gitconfig: gitconfig
     ~/.gitk: gitk
@@ -19,6 +21,7 @@
     ~/.Xdefaults: Xdefaults.default
     ~/.zshrc: zshrc
 
+    # directories
     ~/.ncmpcpp/:
       glob: true
       path: ncmpcpp/*
@@ -31,6 +34,15 @@
     ~/.config/:
       glob: true
       path: config/**
+
+    # overrides
+    ~/.config/foot/foot.ini:
+      path: config/foot/foot-ohagen.ini
+      if: '[[ "$(hostnamectl hostname)" == "ohagen" ]]'
+    ~/.config/foot/foot.ini:
+      path: config/foot/foot-snozberries.ini
+      if: '[[ "$(hostnamectl hostname)" == "snozberries" ]]'
+
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
