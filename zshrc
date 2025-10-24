@@ -66,4 +66,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # import zsh functions
-source ~/.bin/zsh/*.zsh
+for file in ~/.bin/zsh/*.zsh; do source "$file"; done
