@@ -31,6 +31,11 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"  # Colored completions
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+# aliases
+if [ -n "/usr/bin/exa" ]; then
+	alias ls=exa
+fi
+
 alias no=ls
 
 eval "$(zoxide init zsh)"
