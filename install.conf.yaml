@@ -21,13 +21,18 @@
     ~/.zshrc: zshrc
     ~/.zshenv: zshenv
 
-    # directories
+    # directories, just a symlink
+    ~/.tmux: tmux
+
+    # directories - one level, all files
     ~/.ncmpcpp/:
       glob: true
       path: ncmpcpp/*
     ~/.icons/:
       glob: true
       path: icons/*
+
+    # directories - recursive
     ~/.bin/:
       glob: true
       path: bin/**
