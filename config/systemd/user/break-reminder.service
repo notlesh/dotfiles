@@ -1,0 +1,7 @@
+# ~/.config/systemd/user/break-reminder.service
+[Unit]
+Description=Break reminder notification
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/notify-send -u low "Break" "Time to stretch"

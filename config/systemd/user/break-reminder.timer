@@ -1,0 +1,9 @@
+[Unit]
+Description=Remind me to take breaks
+
+[Timer]
+OnBootSec=29min
+OnUnitActiveSec=29min
+
+[Install]
+WantedBy=timers.target
