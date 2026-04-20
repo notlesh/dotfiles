@@ -1,11 +1,6 @@
 [Unit]
 Description=Run hyprpaper rotate script
-After=graphical-session.target
-PartOf=graphical-session.target
 
 [Service]
 Type=oneshot
 ExecStart=/home/stephen/.bin/hyprland_wallpaper_shuffle.sh
-
-[Install]
-WantedBy=graphical-session.target
