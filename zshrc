@@ -72,3 +72,8 @@ export NVM_DIR="$HOME/.nvm"
 
 # import zsh functions
 for file in ~/.bin/zsh/*.zsh; do source "$file"; done
+
+# disable beeps
+unsetopt BEEP
+unsetopt HIST_BEEP
+unsetopt LIST_BEEP
