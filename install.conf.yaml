@@ -3,6 +3,18 @@
       relink: true
       create: true
 
+- plugins:
+  - dotbot-plugins/dotbot-paru
+
+- paru:
+  - neovim 
+  - zsh
+  - starship
+  - fastfetch
+  - zsh-autosuggestions
+  - zsh-syntax-highlighting
+  - zsh-history-substring-search
+
 - clean: ['~']
 
 - link:
