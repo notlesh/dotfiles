@@ -48,6 +48,12 @@
       path: config/foot/foot-snozberries.ini
       if: '[[ "$(hostnamectl hostname)" == "snozberries" ]]'
 
+    # Hyprland 0.57 only reads hyprland.lua. The glob above links the default
+    # (ohagen) config; this re-links it on snozberries.
+    ~/.config/hypr/hyprland.lua:
+      path: config/hypr/hyprland_snozberries.lua
+      if: '[[ "$(hostnamectl hostname)" == "snozberries" ]]'
+
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
